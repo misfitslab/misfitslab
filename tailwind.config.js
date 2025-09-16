@@ -1,18 +1,35 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{js,jsx,ts,tsx}"],
+  content: [
+    "./app/**/*.{js,ts,jsx,tsx}",   // Next.js app dir
+    "./pages/**/*.{js,ts,jsx,tsx}", // Next.js pages dir
+    "./components/**/*.{js,ts,jsx,tsx}", // Your components
+  ],
   theme: {
     extend: {
-      animation: {
-        'spin-slow': 'spin 8s linear infinite',
-        'spin-reverse': 'spin 6s linear infinite reverse',
-        'gradient-x': 'gradient-x 8s ease infinite',
+      fontFamily: {
+        montserrat: ["Montserrat", "sans-serif"], // ✅ custom font
+      },
+      colors: {
+        brand: {
+          DEFAULT: "#1E40AF", // custom brand color (blue-900)
+          light: "#3B82F6",   // lighter shade
+          dark: "#1E3A8A",    // darker shade
+        },
       },
       keyframes: {
-        'gradient-x': {
-          '0%, 100%': { 'background-position': '0% 50%' },
-          '50%': { 'background-position': '100% 50%' },
+        "fade-in": {
+          "0%": { opacity: "0" },
+          "100%": { opacity: "1" },
         },
+        "slide-up": {
+          "0%": { transform: "translateY(20px)", opacity: "0" },
+          "100%": { transform: "translateY(0)", opacity: "1" },
+        },
+      },
+      animation: {
+        "fade-in": "fade-in 1s ease-in-out",
+        "slide-up": "slide-up 1s ease-out",
       },
     },
   },
