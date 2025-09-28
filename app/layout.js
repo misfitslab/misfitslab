@@ -12,9 +12,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "MisFitsLab | Innovative Startup – Website Under Construction",
+  title: "MisfitsLab | Innovative Startup – Website Under Construction",
   description:
-    "MisFitsLab is an upcoming innovative startup building next-level digital solutions. Our website is currently under construction. Stay tuned for our official launch with powerful tools, creative designs, and cutting-edge technology.",
+    "MisfitsLab is an upcoming innovative startup building next-level digital solutions. Our website is currently under construction. Stay tuned for our official launch with powerful tools, creative designs, and cutting-edge technology.",
 };
 
 
